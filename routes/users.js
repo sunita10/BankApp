@@ -60,7 +60,7 @@ router.post('/amount',function(req,res){
   });
 });
 
-router.post('/balance', function(req, res) {
+router.get('/balance', function(req, res,next) {
   var account = req.query.account;
   console.log(account);
   db.open(function (error) {
